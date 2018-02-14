@@ -1,0 +1,9 @@
+
+SELECT client_name from Clients
+join Orders  on Clients.client_id=Orders.client_id
+where order_sum > 50
+
+SELECT client_name from Clients  as c
+join Orders as o on c.client_id=o.client_id
+group by o.client_id
+having sum(o.order_sum)>100
