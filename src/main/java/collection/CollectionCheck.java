@@ -7,7 +7,8 @@ public class CollectionCheck {
       public static Collection<Element> checkElements(Collection<Element> sourceList) {
         Set<Element> elementSet = new HashSet<>();
         if (sourceList==null){
-            System.out.println("Collection is null");
+            throw new IllegalArgumentException();
+
         }
         for (Element element : sourceList) {
             if (element.age() > 20) {
